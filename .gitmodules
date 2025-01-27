@@ -1,0 +1,3 @@
+[submodule "eyetracker_tools"]
+	path = eyetracker_tools
+	url = https://github.com/TheComputationalBrain/eyetracker_tools

@@ -63,10 +63,11 @@ def process_eyelink_data(eyelink_list,
         stim_type = [msg['msg'].split(',')[2].strip('stim ')
                      for msg in pup.events if re.match('block', msg['msg'])]
         
-        # Plot and save quality check plots   
-        plt.xlabel("Time stamp", fontsize=14)
-        plt.ylabel("Pupil diameter", fontsize=16)
-        plt.title(f"Session {sess_num[0]}", fontsize=18)    
+        # Plot and save quality check plots  
+        if plot: 
+            plt.xlabel("Time stamp", fontsize=14)
+            plt.ylabel("Pupil diameter", fontsize=16)
+            plt.title(f"Session {sess_num[0]}", fontsize=18)    
         
         # Epoch data
         if zscore:
